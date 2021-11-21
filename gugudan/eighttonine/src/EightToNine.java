@@ -7,6 +7,8 @@ public class EightToNine {
         System.out.print("출력할 구구단을 입력하세요: ");
         int dan = scanner.nextInt();
 
+        scanner.close();
+
         if (dan < 2) {
             System.out.println("2이상, 9이하의 값만 입력할 수 있습니다.");
         } else if (dan > 9) {

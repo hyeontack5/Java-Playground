@@ -7,6 +7,8 @@ public class FourToFive {
         System.out.print("출력할 구구단을 입력하세요: ");
         int dan = scanner.nextInt();
 
+        scanner.close();
+
         System.out.println(dan + " * " + 1 + " = " + (dan * 1));
         System.out.println(dan + " * " + 2 + " = " + (dan * 2));
         System.out.println(dan + " * " + 3 + " = " + (dan * 3));

@@ -21,5 +21,7 @@ public class SixToSeven {
         for (int j = 1; j < 10; j++) {
             System.out.println(dan + " * " + j + " = " + (dan * j));
         }
+
+        scanner.close();
     }
 }
