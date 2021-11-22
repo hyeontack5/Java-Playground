@@ -21,20 +21,27 @@ public class Calendar {
 
     public static void main(String[] args) {
         // 숫자를 입력받아 해당하는 달의 최대 일수를 출력하는 프로그램
+        String prompt = "> ";
         Scanner scanner = new Scanner(System.in);
         Calendar cal = new Calendar();
 
-        System.out.println("반복횟수를 입력하세요.");
-        int count = scanner.nextInt();
-
-        for (int i = 0; i < count; i++) {
+        while (true) {
             System.out.println("월을 입력하세요.");
+            System.out.print(prompt);
             int month = scanner.nextInt();
+
+            if (month == -1) {
+                System.out.println("Have a nice day!");
+                break;
+            }
+
+            if (month > 12) {
+                continue;
+            }
+
             System.out.printf("%d월은 %d일까지 있습니다.\n", month, cal.getMaxDaysOfMonth(month));
         }
 
         scanner.close();
-
-//        cal.printSampleCalendar();
     }
 }
