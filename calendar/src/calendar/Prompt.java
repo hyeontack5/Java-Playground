@@ -35,10 +35,13 @@ public class Prompt {
         Scanner scanner = new Scanner(System.in);
         Calendar cal = new Calendar();
 
+        int month = 1;
+        int year = 2017;
+
         while (true) {
             System.out.println("년을 입력하세요. (exit: -1)");
             System.out.print("YEAR> ");
-            int year = scanner.nextInt();
+            year = scanner.nextInt();
             if (year == -1) {
                 System.out.println("Have a nice day!");
                 break;
@@ -47,17 +50,13 @@ public class Prompt {
             System.out.println("월을 입력하세요.");
             System.out.print("MONTH> ");
             int month = scanner.nextInt();
-            System.out.println("첫번째 요일을 입력하세요. (SUN, MON, WED, THU, FRI, SAT)");
-            System.out.print("WEEK> ");
-            String str_weekday = scanner.next();
-            int weekday = parseDay(str_weekday);
 
             if (month < 1 || month > 12) {
                 System.out.println("잘못된 입력입니다.");
                 continue;
             }
 
-            cal.printCalendar(year, month, weekday);
+            cal.printCalendar(year, month);
         }
 
         scanner.close();
