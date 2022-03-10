@@ -49,7 +49,7 @@ public class Prompt {
 
             System.out.println("월을 입력하세요.");
             System.out.print("MONTH> ");
-            int month = scanner.nextInt();
+            month = scanner.nextInt();
 
             if (month < 1 || month > 12) {
                 System.out.println("잘못된 입력입니다.");
@@ -59,6 +59,7 @@ public class Prompt {
             cal.printCalendar(year, month);
         }
 
+        System.out.println("Bye~");
         scanner.close();
     }
 

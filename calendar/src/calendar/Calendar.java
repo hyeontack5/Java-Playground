@@ -56,7 +56,7 @@ public class Calendar {
         System.out.println();
     }
 
-    private int getWeekDay(int year, int month, int i) {
+    private int getWeekDay(int year, int month, int day) {
         int syear = 1970;
         final int STANDARD_WEEKDAY = 3; // 1970/Jan/1st = Thursday
 
